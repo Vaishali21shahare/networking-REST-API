@@ -29,7 +29,7 @@ app.get('/todos', (req, res) => {
 app.post('/todos', (req,res) => {
     const newTodo = req.body;
     todos.push(newTodo);
-    res.json({
+    res.status(200).json({
         message: "New Todo Added!"
     });
 });
